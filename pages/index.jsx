@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 // Enunciado:
@@ -18,7 +17,8 @@ export default function Home() {
     }
     const monthlyInterest = interest / 100 / 12;
     const monthlyPayment = amount * monthlyInterest / (1 - Math.pow(1 / 1 + monthlyInterest, -months));
-    return monthlyPayment;
+    //retornar el mensaje con el resultado
+    return `El importe mensual es de ${monthlyPayment.toFixed(2)}€`;
   }
   return (
     //div que abarque el 100% de la pantalla
@@ -101,7 +101,7 @@ export default function Home() {
                 months,
                 interest
               );
-              alert(`El importe mensual es de ${monthlyPayment}€`);
+              alert(`${monthlyPayment}`);
             }
             }
           >
