@@ -88,10 +88,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={styles.buttonContainer}>
-        {/* boton de calcular con animaciony activando funcion para calcular hipoteca */}
           <button
-            className={styles.button}
+            className="p-3 m-7 rounded-full transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
             onClick={() => {
               const amount = document.getElementById("cantidad").value;
               const months = document.getElementById("cuotas").value;
@@ -107,7 +105,6 @@ export default function Home() {
           >
             Calcular
           </button>
-        </div>
       </main>
     </div>
   );
